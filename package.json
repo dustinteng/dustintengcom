@@ -1,5 +1,5 @@
 {
-  "name": "nextjs",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "@emailjs/browser": "^4.4.1",
+    "@fontsource/montserrat": "^4.5.10",
+    "@heroicons/react": "^2.0.18",
+    "next": "^15.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.8",
+    "typescript": "4.8.3"
   }
 }
