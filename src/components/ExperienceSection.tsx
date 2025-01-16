@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image"; // Import Image from next/image
 import { useTheme } from "@/context/ThemeContext";
 
 const experiences = [
@@ -65,15 +66,17 @@ const ExperienceSection = () => {
           <div
             key={index}
             className={`p-6 rounded shadow-lg transition-colors duration-300 ${
-              isDarkMode ? "bg-gray-999 text-white" : "bg-gray-100 text-black"
+              isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
             }`}
           >
             <div className="flex items-center space-x-4 mb-4">
               {experience.logo && (
-                <img
+                <Image
                   src={experience.logo}
-                  alt={experience.company}
-                  className="w-16 h-16 object-contain"
+                  alt={`${experience.company} logo`}
+                  width={64} // Set dimensions for optimization
+                  height={64}
+                  className="object-contain"
                 />
               )}
               <div>

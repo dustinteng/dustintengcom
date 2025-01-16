@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image"; // Import Image from next/image
 import Link from "next/link";
 import { useTheme } from "@/context/ThemeContext";
 
@@ -49,9 +50,11 @@ const PortfolioSection = () => {
                 : "bg-gray-100 bg-opacity-70 hover:scale-105"
             }`}
           >
-            <img
+            <Image
               src={project.image}
-              alt={project.title}
+              alt={`${project.title} image`}
+              width={500} // Adjust dimensions for optimized loading
+              height={224} // Adjust dimensions for optimized loading
               className="w-full h-56 object-cover"
             />
             <div

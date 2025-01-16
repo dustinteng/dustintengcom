@@ -60,8 +60,11 @@ const ContactSection = () => {
           className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-8"
         >
           <div className="mb-6">
-            <label className="block mb-2 font-semibold">Name</label>
+            <label htmlFor="name" className="block mb-2 font-semibold">
+              Name
+            </label>
             <input
+              id="name"
               type="text"
               className={`w-full p-3 rounded border focus:ring-2 ${
                 isDarkMode
@@ -76,8 +79,11 @@ const ContactSection = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 font-semibold">Email</label>
+            <label htmlFor="email" className="block mb-2 font-semibold">
+              Email
+            </label>
             <input
+              id="email"
               type="email"
               className={`w-full p-3 rounded border focus:ring-2 ${
                 isDarkMode
@@ -92,8 +98,11 @@ const ContactSection = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 font-semibold">Message</label>
+            <label htmlFor="message" className="block mb-2 font-semibold">
+              Message
+            </label>
             <textarea
+              id="message"
               className={`w-full p-3 rounded border focus:ring-2 ${
                 isDarkMode
                   ? "bg-darkBackground text-white border-neonBlue focus:ring-neonBlue"
@@ -123,9 +132,9 @@ const ContactSection = () => {
         </form>
         {/* Contact Info */}
         <div className="w-full md:w-1/2 md:ml-8">
-          <h3 className="text-2xl font-semibold mb-4">Let's Connect</h3>
+          <h3 className="text-2xl font-semibold mb-4">Let&apos;s Connect</h3>
           <p className="mb-6">
-            I'm open to discussing new projects, creative ideas, or
+            I&apos;m open to discussing new projects, creative ideas, or
             opportunities to be part of your visions. Feel free to reach out!
           </p>
           <ul>
