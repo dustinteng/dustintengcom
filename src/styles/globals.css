@@ -80,21 +80,33 @@ textarea:focus {
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 8px; /* Adjust scrollbar width */
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #003366; /* Dark blue for light mode */
-  border-radius: 9999px;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  border-radius: 9999px; /* Fully rounded scrollbar */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Dark mode scrollbar thumb */
 html.dark ::-webkit-scrollbar-thumb {
-  background-color: #00ffff; /* Neon blue for dark mode */
+  background-color: rgba(
+    0,
+    255,
+    255,
+    0.75
+  ); /* Neon blue (75% opacity) for dark mode */
 }
 
+/* Hover effect for both modes */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #39ff14; /* Hover effect */
+  background-color: #39ff14; /* Bright green hover effect */
+}
+
+/* Optional: Scrollbar track styling */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track for minimal distraction */
 }
 
 /* Image Styling */

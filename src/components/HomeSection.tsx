@@ -26,8 +26,8 @@ const HomeSection = () => {
           scroll={true}
           className={`inline-block px-8 py-4 font-semibold rounded transition-colors duration-300 ${
             isDarkMode
-              ? "bg-neonBlue text-darkBackground hover:bg-darkBlue"
-              : "bg-darkBlue text-white hover:bg-neonBlue"
+              ? "bg-neonBlue/75 text-black hover:bg-darkBlue hover:text-white"
+              : "bg-darkBlue text-white hover:bg-neonBlue/75 hover:text-black"
           }`}
         >
           View My Work

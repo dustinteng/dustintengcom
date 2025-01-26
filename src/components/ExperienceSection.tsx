@@ -81,12 +81,16 @@ const ExperienceSection = () => {
               )}
               <div>
                 <h3 className="text-2xl font-semibold">{experience.role}</h3>
-                <p className="text-neonBlue font-medium">
+                <p className="font-medium">
                   <a
                     href={experience.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className={`hover:underline ${
+                      isDarkMode
+                        ? "text-[rgba(0,255,255,0.75)]"
+                        : "text-darkBlue"
+                    }`}
                   >
                     {experience.company}
                   </a>

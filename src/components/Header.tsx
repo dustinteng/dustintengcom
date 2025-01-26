@@ -24,15 +24,13 @@ const Header = () => {
     >
       <nav className="container flex justify-between items-center px-6">
         {/* Logo */}
-        <div
-          className={`text-2xl font-bold transition-colors duration-300 ${
-            isDarkMode ? "text-white" : "text-darkBlue"
-          }`}
-        >
+        <div className="text-2xl font-bold">
           <Link
             href="/"
-            className={`hover:text-neonBlue transition-colors duration-300 ${
-              isDarkMode ? "text-white" : "text-black"
+            className={`transition-colors duration-300 ${
+              isDarkMode
+                ? "text-white hover:text-[rgba(0,255,255,0.75)]"
+                : "text-black hover:text-[rgba(0,255,255,0.75)]"
             }`}
           >
             Tengdyantono
@@ -44,13 +42,13 @@ const Header = () => {
           onClick={toggleTheme}
           aria-label="Toggle Dark Mode"
           className={`mx-auto relative w-12 h-7 rounded-full flex items-center transition-all duration-300 ${
-            isDarkMode ? "bg-neonBlue" : "bg-darkBlue"
+            isDarkMode ? "bg-[rgba(0,255,255,0.75)]" : "bg-darkBlue"
           }`}
         >
           <span
             className={`absolute w-5 h-5 rounded-full shadow-md transform transition-transform ${
               isDarkMode
-                ? "translate-x-6 bg-white"
+                ? "translate-x-6 bg-black"
                 : "translate-x-1 bg-gray-300"
             }`}
           />
@@ -58,11 +56,12 @@ const Header = () => {
 
         {/* Mobile Menu (Headless UI) */}
         <Menu as="div" className="relative md:hidden">
+          {/* Menu Button */}
           <Menu.Button
             className={`p-2 rounded-full transition-colors duration-300 ${
               isDarkMode
-                ? "bg-lightBlue/20 hover:bg-lightBlue text-white"
-                : "bg-darkBlue/20 hover:bg-darkBlue text-black"
+                ? "bg-darkBackground/80 text-white"
+                : "bg-lightBackground/80 text-black"
             }`}
             aria-label="Toggle Navigation Menu"
           >
@@ -74,8 +73,10 @@ const Header = () => {
               )
             }
           </Menu.Button>
+
+          {/* Menu Items */}
           <Menu.Items
-            className={`absolute right-0 mt-2 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${
+            className={`absolute right-0 mt-2 w-48 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-all duration-300 ${
               isDarkMode
                 ? "bg-darkBackground text-white"
                 : "bg-lightBackground text-black"
@@ -86,12 +87,14 @@ const Header = () => {
                 {({ active }) => (
                   <Link
                     href={`#${section}`}
-                    className={`block px-4 py-2 text-sm ${
+                    className={`block px-4 py-2 text-sm font-medium transition-colors duration-300 ${
                       active
                         ? isDarkMode
                           ? "bg-lightBlue text-darkBackground"
                           : "bg-darkBlue text-white"
-                        : ""
+                        : isDarkMode
+                        ? "text-gray-400"
+                        : "text-gray-700"
                     }`}
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -110,8 +113,8 @@ const Header = () => {
                 href={`#${section}`}
                 className={`transition-colors duration-300 ${
                   isDarkMode
-                    ? "text-white hover:text-neonBlue"
-                    : "text-black hover:text-darkBlue"
+                    ? "text-white hover:text-[rgba(0,255,255,0.75)]"
+                    : "text-black hover:text-[rgba(0,255,255,0.75)]"
                 }`}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}

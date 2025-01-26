@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
-import { useTheme } from "@/context/ThemeContext"; // Import ThemeContext
+import { useTheme } from "@/context/ThemeContext";
 
 const ContactSection = () => {
-  const { isDarkMode } = useTheme(); // Access theme context for dark mode
+  const { isDarkMode } = useTheme();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -15,7 +15,6 @@ const ContactSection = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,7 +33,6 @@ const ContactSection = () => {
 
     try {
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      setSuccess(true);
       alert("Email sent successfully!");
       setFormData({ name: "", email: "", message: "" }); // Reset form
     } catch (error) {
@@ -68,8 +66,8 @@ const ContactSection = () => {
               type="text"
               className={`w-full p-3 rounded border focus:ring-2 ${
                 isDarkMode
-                  ? "bg-darkBackground text-white border-neonBlue focus:ring-neonBlue"
-                  : "bg-lightBackground text-black border-gray-300 focus:ring-darkBlue"
+                  ? "bg-darkBackground text-white border-neonBlue/75 focus:ring-neonBlue/75"
+                  : "bg-lightBackground text-black border-gray-300 focus:ring-darkBlue/75"
               } focus:outline-none`}
               required
               value={formData.name}
@@ -87,8 +85,8 @@ const ContactSection = () => {
               type="email"
               className={`w-full p-3 rounded border focus:ring-2 ${
                 isDarkMode
-                  ? "bg-darkBackground text-white border-neonBlue focus:ring-neonBlue"
-                  : "bg-lightBackground text-black border-gray-300 focus:ring-darkBlue"
+                  ? "bg-darkBackground text-white border-neonBlue/75 focus:ring-neonBlue/75"
+                  : "bg-lightBackground text-black border-gray-300 focus:ring-darkBlue/75"
               } focus:outline-none`}
               required
               value={formData.email}
@@ -105,8 +103,8 @@ const ContactSection = () => {
               id="message"
               className={`w-full p-3 rounded border focus:ring-2 ${
                 isDarkMode
-                  ? "bg-darkBackground text-white border-neonBlue focus:ring-neonBlue"
-                  : "bg-lightBackground text-black border-gray-300 focus:ring-darkBlue"
+                  ? "bg-darkBackground text-white border-neonBlue/75 focus:ring-neonBlue/75"
+                  : "bg-lightBackground text-black border-gray-300 focus:ring-darkBlue/75"
               } focus:outline-none`}
               rows={5}
               required
@@ -122,8 +120,8 @@ const ContactSection = () => {
               loading
                 ? "bg-gray-500 cursor-not-allowed"
                 : isDarkMode
-                ? `bg-neonBlue text-darkBackground hover:bg-darkBlue active:bg-darkBackground`
-                : `bg-darkBlue text-white hover:bg-neonBlue active:bg-darkBlue`
+                ? `bg-neonBlue/75 text-darkBackground hover:bg-darkBlue/75 active:bg-darkBackground`
+                : `bg-darkBlue/75 text-white hover:bg-neonBlue/75 active:bg-darkBlue/75`
             }`}
             disabled={loading}
           >
@@ -141,10 +139,10 @@ const ContactSection = () => {
             <li className="mb-4">
               <a
                 href="mailto:dustinteng12@gmail.com"
-                className={`flex items-center hover:text-darkBlue dark:hover:text-neonBlue focus:outline-none focus:ring-2 ${
+                className={`flex items-center hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue"
-                    : "text-darkBlue focus:ring-darkBlue"
+                    ? "text-white focus:ring-neonBlue/75"
+                    : "text-darkBlue/75 focus:ring-darkBlue/75"
                 }`}
               >
                 <span className="mr-2">Email:</span> dustinteng12@gmail.com
@@ -153,10 +151,10 @@ const ContactSection = () => {
             <li className="mb-4">
               <a
                 href="tel:+1234567890"
-                className={`flex items-center hover:text-darkBlue dark:hover:text-neonBlue focus:outline-none focus:ring-2 ${
+                className={`flex items-center hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue"
-                    : "text-darkBlue focus:ring-darkBlue"
+                    ? "text-white focus:ring-neonBlue/75"
+                    : "text-darkBlue/75 focus:ring-darkBlue/75"
                 }`}
               >
                 <span className="mr-2">Phone:</span> +1 (253) 332-2566
@@ -167,10 +165,10 @@ const ContactSection = () => {
                 href="https://github.com/dustinteng"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-darkBlue dark:hover:text-neonBlue focus:outline-none focus:ring-2 ${
+                className={`hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue"
-                    : "text-darkBlue focus:ring-darkBlue"
+                    ? "text-white focus:ring-neonBlue/75"
+                    : "text-darkBlue/75 focus:ring-darkBlue/75"
                 }`}
               >
                 GitHub
@@ -179,10 +177,10 @@ const ContactSection = () => {
                 href="https://www.linkedin.com/in/jantengdyantono/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-darkBlue dark:hover:text-neonBlue focus:outline-none focus:ring-2 ${
+                className={`hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue"
-                    : "text-darkBlue focus:ring-darkBlue"
+                    ? "text-white focus:ring-neonBlue/75"
+                    : "text-darkBlue/75 focus:ring-darkBlue/75"
                 }`}
               >
                 LinkedIn

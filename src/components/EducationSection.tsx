@@ -6,14 +6,16 @@ import { useTheme } from "@/context/ThemeContext";
 const education = [
   {
     institution: "University of California, Berkeley",
-    degree: "Master of Engineering in Robotics",
+    degree: "M.Eng. Mechanical Engineering",
+    specialization: "Specialization: Controls and Robotics",
     duration: "2024 - 2025",
     logo: "/images/ucberkeley.png",
     website: "https://engineering.berkeley.edu",
   },
   {
     institution: "University of California, San Diego",
-    degree: "Bachelor of Science in Mechanical Engineering",
+    degree: "B.S. Mechanical Engineering",
+    specialization: "Specialization: Controls and Robotics",
     duration: "2018 - 2021",
     logo: "/images/ucsandiego.png",
     website: "https://www.ucsd.edu",
@@ -53,12 +55,17 @@ const EducationSection = () => {
               <div>
                 <h3 className="text-xl font-semibold">{edu.degree}</h3>
                 <p className="text-sm font-medium">{edu.duration}</p>
-                <p className="text-neonBlue font-medium">
+                <p className="text-sm italic text-gray-600 dark:text-gray-400">
+                  {edu.specialization}
+                </p>
+                <p className="text-lg font-medium">
                   <a
                     href={edu.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className={`hover:underline ${
+                      isDarkMode ? "text-lightBlue/75" : "text-darkBlue/75"
+                    }`}
                   >
                     {edu.institution}
                   </a>
