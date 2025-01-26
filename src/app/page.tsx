@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactSection from "@/components/ContactSection";
+import EducationSection from "@/components/EducationSection";
 import { CustomGeometricaBackground } from "@/utils/Backgrounds";
 import { useTheme } from "@/context/ThemeContext"; // Ensure this is correctly imported
 import Header from "@/components/Header";
@@ -31,6 +32,7 @@ export default function Page() {
       <HomeSection />
       <AboutSection />
       <ExperienceSection />
+      <EducationSection />
       <PortfolioSection />
       <ContactSection />
       <Footer />

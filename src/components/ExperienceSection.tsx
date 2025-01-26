@@ -66,7 +66,7 @@ const ExperienceSection = () => {
           <div
             key={index}
             className={`p-6 rounded shadow-lg transition-colors duration-300 ${
-              isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+              isDarkMode ? "bg-gray-999 text-white" : "bg-gray-000 text-black"
             }`}
           >
             <div className="flex items-center space-x-4 mb-4">

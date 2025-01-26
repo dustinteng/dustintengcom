@@ -1,15 +1,18 @@
-"use client";
-
-import React, { useState } from "react";
-import Link from "next/link";
+import { Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import { useTheme } from "@/context/ThemeContext";
 
 const Header = () => {
   const { isDarkMode, toggleTheme } = useTheme();
-  const [navOpen, setNavOpen] = useState(false);
-
-  const sections = ["home", "about", "experience", "portfolio", "contact"];
+  const sections = [
+    "home",
+    "about",
+    "experience",
+    "education",
+    "portfolio",
+    "contact",
+  ];
 
   return (
     <header
@@ -38,10 +41,7 @@ const Header = () => {
 
         {/* Dark Mode Toggle */}
         <button
-          onClick={() => {
-            toggleTheme();
-            console.log("Dark Mode State:", isDarkMode); // Debugging the state
-          }}
+          onClick={toggleTheme}
           aria-label="Toggle Dark Mode"
           className={`mx-auto relative w-12 h-7 rounded-full flex items-center transition-all duration-300 ${
             isDarkMode ? "bg-neonBlue" : "bg-darkBlue"
@@ -55,6 +55,52 @@ const Header = () => {
             }`}
           />
         </button>
+
+        {/* Mobile Menu (Headless UI) */}
+        <Menu as="div" className="relative md:hidden">
+          <Menu.Button
+            className={`p-2 rounded-full transition-colors duration-300 ${
+              isDarkMode
+                ? "bg-lightBlue/20 hover:bg-lightBlue text-white"
+                : "bg-darkBlue/20 hover:bg-darkBlue text-black"
+            }`}
+            aria-label="Toggle Navigation Menu"
+          >
+            {({ open }) =>
+              open ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )
+            }
+          </Menu.Button>
+          <Menu.Items
+            className={`absolute right-0 mt-2 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${
+              isDarkMode
+                ? "bg-darkBackground text-white"
+                : "bg-lightBackground text-black"
+            }`}
+          >
+            {sections.map((section) => (
+              <Menu.Item key={section}>
+                {({ active }) => (
+                  <Link
+                    href={`#${section}`}
+                    className={`block px-4 py-2 text-sm ${
+                      active
+                        ? isDarkMode
+                          ? "bg-lightBlue text-darkBackground"
+                          : "bg-darkBlue text-white"
+                        : ""
+                    }`}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                )}
+              </Menu.Item>
+            ))}
+          </Menu.Items>
+        </Menu>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6 ml-auto">
@@ -73,44 +119,7 @@ const Header = () => {
             </li>
           ))}
         </ul>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setNavOpen(!navOpen)}
-            aria-label="Toggle Navigation Menu"
-          >
-            {navOpen ? (
-              <XMarkIcon className="h-6 w-6 text-neonBlue" />
-            ) : (
-              <Bars3Icon className="h-6 w-6 text-neonBlue" />
-            )}
-          </button>
-        </div>
       </nav>
-
-      {/* Mobile Navigation */}
-      {navOpen && (
-        <ul
-          className={`mobile-nav flex flex-col space-y-4 px-6 py-4 ${
-            isDarkMode
-              ? "bg-darkBackground text-white"
-              : "bg-lightBackground text-black"
-          }`}
-        >
-          {sections.map((section) => (
-            <li key={section}>
-              <Link
-                href={`#${section}`}
-                className="block hover:text-neonBlue transition-colors duration-300"
-                onClick={() => setNavOpen(false)}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
     </header>
   );
 };
