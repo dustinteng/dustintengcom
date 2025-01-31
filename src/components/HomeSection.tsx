@@ -15,11 +15,9 @@ const HomeSection = () => {
       }`}
     >
       <div>
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">
-          Innovating the Future of Robotics
-        </h1>
         <p className="text-xl md:text-2xl mb-8">
-          Bringing ideas to life through technology and engineering.
+          Engineering intelligent systems to revolutionize industries through
+          automation, autonomy, and advanced robotics.
         </p>
         <Link
           href="#portfolio"

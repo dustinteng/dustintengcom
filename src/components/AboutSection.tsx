@@ -21,7 +21,7 @@ const AboutSection = () => {
       <div className="flex flex-col md:flex-row items-center">
         <div className="w-full flex justify-center md:justify-start mb-6 md:mb-0">
           <Image
-            src="/images/profile.JPG"
+            src="/images/profilepic.png"
             alt="Profile"
             width={192} // Define width for optimization (48 * 4 = 192px)
             height={192} // Define height for optimization (48 * 4 = 192px)
