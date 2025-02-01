@@ -69,8 +69,8 @@ const PortfolioSection = () => {
                   href={project.link}
                   className={`transition-colors duration-300 ${
                     isDarkMode
-                      ? "text-neonBlue/75 hover:text-darkBlue/75"
-                      : "text-darkBlue/75 hover:text-neonBlue/75"
+                      ? "text-lightBlue/75 hover:text-lightBlue"
+                      : "text-darkBlue/75 hover:text-black"
                   }`}
                   target="_blank"
                   rel="noopener noreferrer"

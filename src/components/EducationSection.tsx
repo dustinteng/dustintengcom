@@ -64,7 +64,9 @@ const EducationSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`hover:underline ${
-                      isDarkMode ? "text-lightBlue/75" : "text-darkBlue/75"
+                      isDarkMode
+                        ? "text-lightBlue/75 hover:text-lightBlue"
+                        : "text-darkBlue/75 hover:text-black"
                     }`}
                   >
                     {edu.institution}

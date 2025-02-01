@@ -121,7 +121,7 @@ const ContactSection = () => {
                 ? "bg-gray-500 cursor-not-allowed"
                 : isDarkMode
                 ? `bg-neonBlue/75 text-darkBackground hover:bg-darkBlue/75 active:bg-darkBackground`
-                : `bg-darkBlue/75 text-white hover:bg-neonBlue/75 active:bg-darkBlue/75`
+                : `bg-darkBlue/75 text-white hover:bg-black active:bg-darkBlue/75`
             }`}
             disabled={loading}
           >
@@ -139,10 +139,10 @@ const ContactSection = () => {
             <li className="mb-4">
               <a
                 href="mailto:dustinteng12@gmail.com"
-                className={`flex items-center hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
+                className={` ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue/75"
-                    : "text-darkBlue/75 focus:ring-darkBlue/75"
+                    ? "text-lightBlue/75 hover:text-lightBlue"
+                    : "text-darkBlue/75 hover:text-black"
                 }`}
               >
                 <span className="mr-2">Email:</span> dustinteng12@gmail.com
@@ -150,11 +150,11 @@ const ContactSection = () => {
             </li>
             <li className="mb-4">
               <a
-                href="tel:+1234567890"
-                className={`flex items-center hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
+                href="tel:+12533322566"
+                className={` ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue/75"
-                    : "text-darkBlue/75 focus:ring-darkBlue/75"
+                    ? "text-lightBlue/75 hover:text-lightBlue"
+                    : "text-darkBlue/75 hover:text-black"
                 }`}
               >
                 <span className="mr-2">Phone:</span> +1 (253) 332-2566
@@ -165,10 +165,10 @@ const ContactSection = () => {
                 href="https://github.com/dustinteng"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
+                className={` ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue/75"
-                    : "text-darkBlue/75 focus:ring-darkBlue/75"
+                    ? "text-lightBlue/75 hover:text-lightBlue"
+                    : "text-darkBlue/75 hover:text-black"
                 }`}
               >
                 GitHub
@@ -177,10 +177,10 @@ const ContactSection = () => {
                 href="https://www.linkedin.com/in/jantengdyantono/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`hover:text-darkBlue/75 dark:hover:text-neonBlue/75 focus:outline-none focus:ring-2 ${
+                className={` ${
                   isDarkMode
-                    ? "text-white focus:ring-neonBlue/75"
-                    : "text-darkBlue/75 focus:ring-darkBlue/75"
+                    ? "text-lightBlue/75 hover:text-lightBlue"
+                    : "text-darkBlue/75 hover:text-black"
                 }`}
               >
                 LinkedIn

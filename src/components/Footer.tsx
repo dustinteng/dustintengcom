@@ -23,14 +23,15 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Tengdyantono. All rights reserved.
         </p>
 
-        {/* Social Links */}
         <div className="mt-4 flex justify-center space-x-6">
           <Link
             href="https://github.com/dustinteng"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hover:text-neonBlue transition-colors ${
-              isDarkMode ? "text-white" : "text-darkBlue"
+            className={`transition-colors ${
+              isDarkMode
+                ? "text-neonBlue/75 hover:text-white"
+                : "text-darkBlue hover:text-black"
             }`}
           >
             GitHub
@@ -39,19 +40,22 @@ const Footer = () => {
             href="https://linkedin.com/in/jantengdyantono"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hover:text-neonBlue transition-colors ${
-              isDarkMode ? "text-white" : "text-darkBlue"
+            className={`transition-colors ${
+              isDarkMode
+                ? "text-neonBlue/75 hover:text-white"
+                : "text-darkBlue hover:text-black"
             }`}
           >
             LinkedIn
           </Link>
         </div>
 
-        {/* Scroll to Top */}
         <button
           onClick={handleScrollToTop}
-          className={`mt-4 text-inherit hover:text-neonBlue focus:outline-none bg-transparent border-none transition-colors ${
-            isDarkMode ? "text-white" : "text-darkBlue"
+          className={`mt-4 bg-transparent border-none focus:outline-none transition-colors ${
+            isDarkMode
+              ? "text-neonBlue/75 hover:text-white"
+              : "text-darkBlue hover:text-black"
           }`}
         >
           Back to Top

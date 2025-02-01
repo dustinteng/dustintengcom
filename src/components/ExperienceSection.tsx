@@ -88,8 +88,8 @@ const ExperienceSection = () => {
                     rel="noopener noreferrer"
                     className={`hover:underline ${
                       isDarkMode
-                        ? "text-[rgba(0,255,255,0.75)]"
-                        : "text-darkBlue"
+                        ? "text-lightBlue/75 hover:text-lightBlue"
+                        : "text-darkBlue/75 hover:text-black"
                     }`}
                   >
                     {experience.company}
