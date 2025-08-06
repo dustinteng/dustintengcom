@@ -5,142 +5,28 @@
 /* Import Montserrat font */
 @import "@fontsource/montserrat/index.css";
 
-/* Body Styling */
-body {
-  @apply font-sans transition-colors duration-300 bg-lightBackground text-black dark:bg-darkBackground dark:text-white;
+/* Simple base styles only */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  }
 }
 
-/* Anchor Links */
-a {
-  @apply text-neonBlue transition-colors hover:text-darkBlue dark:hover:text-lightBackground;
-  text-decoration: none; /* Remove underlines for cleaner look */
-}
-
-/* Header Styling */
-header {
-  @apply w-full fixed top-0 z-50 transition-colors duration-300 bg-opacity-80 backdrop-blur;
-}
-
-/* Navigation Links */
-nav ul {
-  @apply flex space-x-6;
-}
-
-nav ul li a {
-  @apply transition-colors duration-300 hover:text-darkBlue dark:hover:text-lightBackground;
-}
-
-/* Mobile Navigation */
-.mobile-nav {
-  @apply flex flex-col space-y-4 px-4 py-6;
-}
-
-.mobile-nav li a {
-  @apply block text-neonBlue transition-colors hover:text-darkBlue dark:hover:text-lightBackground;
-}
-
-/* Section Styling */
-section {
-  @apply py-16 px-4;
-}
-
-/* Container */
-.container {
-  @apply max-w-7xl mx-auto;
-}
-
-/* Buttons */
-button {
-  @apply transition-all duration-300 rounded bg-neonBlue text-white dark:bg-lightBackground hover:text-darkBlue dark:hover:text-lightBackground;
-}
-
-button:disabled {
-  @apply bg-gray-400 text-gray-700 cursor-not-allowed;
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  @apply relative w-12 h-6 rounded-full flex items-center bg-darkBlue dark:bg-neonBlue transition-all duration-300;
-}
-
-.toggle-circle {
-  @apply absolute w-5 h-5 bg-white rounded-full shadow-md transform transition-transform;
-}
-
-/* Input Fields */
-input,
-textarea {
-  @apply w-full p-3 rounded border transition-colors duration-300 bg-lightBackground border-neonBlue focus:outline-none focus:border-darkBlue dark:bg-darkBackground dark:border-neonBlue dark:text-white;
-}
-
-input:focus,
-textarea:focus {
-  @apply ring-2 ring-darkBlue dark:ring-neonBlue;
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 8px; /* Adjust scrollbar width */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #003366; /* Dark blue for light mode */
-  border-radius: 9999px; /* Fully rounded scrollbar */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Dark mode scrollbar thumb */
-html.dark ::-webkit-scrollbar-thumb {
-  background-color: rgba(
-    0,
-    255,
-    255,
-    0.75
-  ); /* Neon blue (75% opacity) for dark mode */
-}
-
-/* Hover effect for both modes */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #39ff14; /* Bright green hover effect */
-}
-
-/* Optional: Scrollbar track styling */
-::-webkit-scrollbar-track {
-  background-color: transparent; /* Transparent track for minimal distraction */
-}
-
-/* Image Styling */
-img {
-  @apply max-w-full h-auto rounded;
-}
-
-/* Flex Utility Class */
-.flex-center {
-  @apply flex items-center justify-center;
-}
-
-.hidden-on-mobile {
-  @apply hidden md:block;
-}
-
-.visible-on-mobile {
-  @apply block md:hidden;
-}
-
-/* Additional Styling for Consistency */
-nav {
-  @apply flex items-center justify-between;
-}
-
-.hidden-on-desktop {
-  @apply md:hidden;
-}
-
-.visible-on-desktop {
-  @apply hidden md:flex;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+/* Only essential utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent;
+  }
+  
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-slate-800/50 backdrop-blur-md border border-slate-700/50;
+  }
 }
