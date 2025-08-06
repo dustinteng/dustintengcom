@@ -92,7 +92,7 @@ export default function AboutSection() {
                 <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-6 shadow-lg">
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">My Journey</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    I'm a robotics engineer passionate about designing and building
+                    I&apos;m a robotics engineer passionate about designing and building
                     autonomous systems that integrate hardware, software, and
                     cutting-edge technologies. My expertise spans ROS2 architecture,
                     system design, and real-world applications in autonomous vehicles,
@@ -103,7 +103,7 @@ export default function AboutSection() {
                 <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-6 shadow-lg">
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">What I Do</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    With experience in startups and academic projects, I've developed
+                    With experience in startups and academic projects, I&apos;ve developed
                     scalable prototypes, advanced path-planning algorithms, and
                     innovative solutions for robotics challenges. I thrive at the
                     intersection of technology and creativity, continuously pushing

@@ -24,7 +24,7 @@ export default function HomeSection() {
           {/* Greeting */}
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium">
-              👋 Hello, I'm
+              👋 Hello, I&apos;m
             </span>
           </div>
 

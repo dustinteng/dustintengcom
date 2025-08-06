@@ -56,7 +56,7 @@ export default function ContactSection() {
               Get In Touch
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Let's collaborate on your next robotics project or discuss opportunities
+              Let&apos;s collaborate on your next robotics project or discuss opportunities
             </p>
           </div>
 
@@ -125,9 +125,9 @@ export default function ContactSection() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Let's Connect</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Let&apos;s Connect</h3>
                 <p className="text-slate-600 dark:text-slate-400 mb-8">
-                  I'm open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
+                  I&apos;m open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
                 </p>
 
                 <div className="space-y-6">

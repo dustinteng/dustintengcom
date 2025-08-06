@@ -215,7 +215,7 @@ export const themeClass = (lightClass: string, darkClass: string) => {
   return `${lightClass} dark:${darkClass}`;
 };
 
-export default {
+const themeConfig = {
   designTokens,
   colorUtils,
   themeUtils,
@@ -225,4 +225,6 @@ export default {
   layout,
   cn,
   themeClass,
-}; 
+};
+
+export default themeConfig; 

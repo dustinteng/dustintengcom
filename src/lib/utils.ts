@@ -205,7 +205,7 @@ export const performanceUtils = {
   },
 };
 
-export default {
+const utils = {
   cn,
   debounce,
   throttle,
@@ -218,4 +218,6 @@ export default {
   animation,
   validation,
   performance: performanceUtils,
-}; 
+};
+
+export default utils; 
